@@ -5,13 +5,7 @@ console.log('triangle(7, "leg", 18, "hypotenuse")');
 
 function triangle(firstValue, firstSide, secondValue, secondSide) {
   var a, b, c, alpha, beta;
-  
-  if (a <= 0 || b <= 0 || c <= 0 || alpha <= 0 || beta <= 0) {
-    return "Zero or negative input.";
-  }
-  if(alpha >= 90 || beta >= 90){
-    return "The angle must be less than 90 degrees.";
-  }
+
   const isValid = ["leg", "hypotenuse", "adjacent angle", "opposite angle", "angle"];
   if (!isValid.includes(firstSide) || !isValid.includes(secondSide)) {
       console.log("Invalid values.");
@@ -92,6 +86,12 @@ function triangle(firstValue, firstSide, secondValue, secondSide) {
       b = c * Math.cos(inradians(alpha));
   } else {
       return "failed";
+  }
+  if (a <= 0 || b <= 0 || c <= 0 || alpha <= 0 || beta <= 0) {
+    return "Zero or negative input.";
+  }
+  if(alpha >= 90 || beta >= 90){
+    return "The angle must be less than 90 degrees.";
   }
   if (c === a || c === b) {
     return "Hypotenuse cannot be equal to one of the legs.";
