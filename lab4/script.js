@@ -244,7 +244,7 @@ const Library = {
       return array;
   }
   };
-  
+   
   let dense = [
     73, 28, 96, 54, 31, 14, 80, 92, 20, 66, 7, 61, 34, 49, 15, 100, 78, 4, 11, 42,
     25, 99, 70, 88, 29, 85, 90, 55, 53, 39, 36, 59, 21, 40, 84, 24, 63, 2, 5, 45,
@@ -254,17 +254,17 @@ const Library = {
   ];  
   console.log("Початковий масив:", dense.join(", "));
   console.log("\nСортування за зростанням:");
-  Library.bubble([...dense], true); 
-  Library.selection([...dense], true); 
-  Library.insertion([...dense], true); 
-  Library.shell([...dense], true); 
-  Library.quick([...dense], true); 
+  Library.bubble(Array.from(dense), true);
+  Library.selection(Array.from(dense), true);
+  Library.insertion(Array.from(dense), true);
+  Library.shell(Array.from(dense), true);
+  Library.quick(Array.from(dense), true);
   console.log("\nСортування за спаданням:");
-  Library.bubble([...dense], false); 
-  Library.selection([...dense], false); 
-  Library.insertion([...dense], false); 
-  Library.shell([...dense], false); 
-  Library.quick([...dense], false); 
+  Library.bubble(Array.from(dense), false);
+  Library.selection(Array.from(dense), false);
+  Library.insertion(Array.from(dense), false);
+  Library.shell(Array.from(dense), false);
+  Library.quick(Array.from(dense), false);
   
   let sparse = [
     73, 28, , 54, 31, 14, 80, , 20, 66, 7, 61, , 49, 15, , 78, 4, 11, 42,
@@ -276,14 +276,14 @@ const Library = {
   
   console.log("\nПочатковий масив:",sparse.join(", "));
   console.log("\nСортування за зростанням:");
-  Library.bubble([...sparse], true); 
-  Library.selection([...sparse], true);
-  Library.insertion([...sparse], true); 
-  Library.shell([...sparse], true); 
-  Library.quick([...sparse], true); 
+  Library.bubble(Array.from(sparse), true); 
+  Library.selection(Array.from(sparse), true); 
+  Library.insertion(Array.from(sparse), true); 
+  Library.shell(Array.from(sparse), true); 
+  Library.quick(Array.from(sparse), true); 
   console.log("\nСортування за спаданням:");
-  Library.bubble([...sparse], false); 
-  Library.selection([...sparse], false); 
-  Library.insertion([...sparse], false); 
-  Library.shell([...sparse], false); 
-  Library.quick([...sparse], false);
+  Library.bubble(Array.from(sparse), false);
+  Library.selection(Array.from(sparse), false); 
+  Library.insertion(Array.from(sparse), false);
+  Library.shell(Array.from(sparse), false);
+  Library.quick(Array.from(sparse), false);
