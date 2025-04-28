@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Гра Клікер</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div id="info">
+      <span>Очки: <span id="score">0</span></span>
+      <span style="margin-left: 20px;">Таймер: <span id="timer">0</span> сек</span>
+      <div>
+        <button id="restart" onclick="restart()">Рестарт</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="game"></div>
+
+  <script>
+    function restart() {
+      location.reload();
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
