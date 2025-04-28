@@ -109,12 +109,6 @@ function show() {
   const level = value.get('level');
   const color = value.get('color');
 
-  if (!level || !color || !range[level]) {
-    alert('Некоректні параметри гри!');
-    window.location.href = 'index.html';
-    return;
-  }
-
   settings = {
     timetoplay: range[level].timetoplay,
     size: range[level].size,
