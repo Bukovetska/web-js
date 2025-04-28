@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Гра Клікер</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Гра "Клікер"</h1>
+    <form id="settingsForm">
+      <select id="level" name="level">
+        <option value="">Оберіть рівень</option>
+        <option value="easy">Низький</option>
+        <option value="medium">Середній</option>
+        <option value="hard">Високий</option>
+      </select>
+
+      <select id="color" name="color">
+        <option value="">Оберіть колір</option>
+        <option value="red">Червоний</option>
+        <option value="green">Зелений</option>
+        <option value="blue">Синій</option>
+      </select>
+
+      <button type="submit">Старт</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('settingsForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const level = document.getElementById('level').value;
+      const color = document.getElementById('color').value;
+
+      if (!level || !color) {
+        alert('Будь ласка, оберіть всі параметри гри!');
+        return;
+      }
+
+      const params = new URLSearchParams({ level, color });
+      window.location.href = `play.html?${params.toString()}`;
+    });
+  </script>
+</body>
+</html>
