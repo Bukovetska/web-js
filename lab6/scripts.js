@@ -106,7 +106,7 @@ function startTimer() {
 }
 
 function newGame() {
-  fetch('levels.json')
+  fetch('data.json')
     .then(response => response.json())
     .then(levels => {
       let newIndex;
