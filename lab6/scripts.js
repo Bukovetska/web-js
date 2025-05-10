@@ -17,7 +17,12 @@ function board() {
   for (let y = 0; y < nowBoard.length; y++) {
     for (let x = 0; x < nowBoard[y].length; x++) {
       const div = document.createElement('div');
-      div.className = nowBoard[y][x] === 1 ? 'cell on' : 'cell';
+      if (nowBoard[y][x] === 1) {
+      div.className = 'cell on';
+      } else {
+        div.className = 'cell';
+    }   
+
       div.id = `cell-${x}-${y}`; 
 
       div.onclick = function () {
