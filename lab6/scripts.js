@@ -108,14 +108,14 @@ function startTimer() {
 function newGame() {
   fetch('data.json')
     .then(response => response.json())
-    .then(levels => {
+    .then(data => {
       let newIndex;
       do {
-        newIndex = Math.floor(Math.random() * levels.length);
+        newIndex = Math.floor(Math.random() * data.length);
       } while (newIndex === prevLevel);
 
       prevLevel = newIndex;
-      const level = levels[newIndex];
+      const level = data[newIndex];
 
       start = [];
       nowBoard = [];
