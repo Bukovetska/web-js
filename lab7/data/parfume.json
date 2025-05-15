@@ -1,0 +1,53 @@
+{
+  "category": "Парфуми",
+  "items": [
+    {
+      "id": 1,
+      "name": "Літній аромат",
+      "shortname": "summer",
+      "description": "Свіжий квітковий аромат для літа.",
+      "price": "500 грн",
+      "image": "image/parfume.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Вечірній аромат",
+      "shortname": "evening",
+      "description": "Глибокий та чуттєвий запах.",
+      "price": "680 грн",
+      "image": "image/parfume2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Цитрусовий аромат",
+      "shortname": "citrus",
+      "description": "Яскравість та енергія у кожній ноті.",
+      "price": "700 грн",
+      "image": "image/parfume3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Зимовий аромат",
+      "shortname": "winter",
+      "description": "Тепло, що огортає у холодні дні.",
+      "price": "550 грн",
+      "image": "image/parfume4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Весняний аромат",
+      "shortname": "spring",
+      "description": "Ніжність пробудженої природи.",
+      "price": "640 грн",
+      "image": "image/parfume5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Свіжий аромат",
+      "shortname": "fresh",
+      "description": "Легкість, що дарує свободу.",
+      "price": "780 грн",
+      "image": "image/parfume6.jpg"
+    }
+  ]
+}

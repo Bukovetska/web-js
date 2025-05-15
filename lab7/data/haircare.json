@@ -1,0 +1,53 @@
+{
+  "category": "Догляд за волоссям",
+  "items": [
+    {
+      "id": 1,
+      "name": "Шампунь для блиску",
+      "shortname": "shampoo",
+      "description": "Надає волоссю блиску та сили.",
+      "price": "200 грн",
+      "image": "image/shampoo.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Маска для волосся",
+      "shortname": "mask",
+      "description": "Глибоке живлення та відновлення.",
+      "price": "270 грн",
+      "image": "image/mask.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Термозахист",
+      "shortname": "termo",
+      "description": "Захист від високих температур — щодня.",
+      "price": "150 грн",
+      "image": "image/termo.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Олія для волосся",
+      "shortname": "oil",
+      "description": "Гладкість і блиск для кінчиків.",
+      "price": "290 грн",
+      "image": "image/oil.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Кондиціонер",
+      "shortname": "conditioner",
+      "description": "М’якість та легке розчісування.",
+      "price": "340 грн",
+      "image": "image/conditioner.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Пілінг для шкіри голови",
+      "shortname": "scalp",
+      "description": "Свіжість і чистота від коренів.",
+      "price": "450 грн",
+      "image": "image/scalp.jpg"
+    }
+  ]
+}

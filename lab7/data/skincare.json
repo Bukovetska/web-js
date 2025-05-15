@@ -1,0 +1,53 @@
+{
+  "category": "Догляд за шкірою",
+  "items": [
+    {
+      "id": 1,
+      "name": "Зволожуючий крем",
+      "shortname": "cream",
+      "description": "Інтенсивне зволоження щодня.",
+      "price": "250 грн",
+      "image": "image/cream.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Очищуючий гель",
+      "shortname": "gel",
+      "description": "Чистота і свіжість з першого дотику.",
+      "price": "360 грн",
+      "image": "image/gel.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Нічний крем",
+      "shortname": "nightcream",
+      "description": "Відновлення під час сну",
+      "price": "300 грн",
+      "image": "image/nightcream.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Денний крем",
+      "shortname": "daycream",
+      "description": "Захист і догляд на весь день.",
+      "price": "500 грн",
+      "image": "image/daycream.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Тонік для обличчя",
+      "shortname": "tonic",
+      "description": "Баланс та тонус шкіри.",
+      "price": "180 грн",
+      "image": "image/tonic.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Гіалуронова кислота",
+      "shortname": "hyaluronic",
+      "description": "Глибоке зволоження й еластичність.",
+      "price": "450 грн",
+      "image": "image/hyaluronic.jpg"
+    }
+  ]
+}
