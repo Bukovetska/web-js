@@ -1,0 +1,53 @@
+{
+  "category": "Макіяж",
+  "items": [
+    {
+      "id": 1,
+      "name": "Тональний крем",
+      "shortname": "foundation",
+      "description": "Забезпечує рівний тон шкіри.",
+      "price": "320 грн",
+      "image": "image/foundation.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Помада",
+      "shortname": "lipstick",
+      "description": "Яскравий колір і зволоження.",
+      "price": "150 грн",
+      "image": "image/lipstick.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Туш для вій",
+      "shortname": "mascara",
+      "description": "Додає об'єму вашим очам.",
+      "price": "300 грн",
+      "image": "image/volume.png"
+    },
+    {
+      "id": 4,
+      "name": "Консилер",
+      "shortname": "concealer",
+      "description": "Замаскує все зайве під очима.",
+      "price": "350 грн",
+      "image": "image/Concealer.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Хайлайтер",
+      "shortname": "highlighter",
+      "description": "Для сяйва обличчя.",
+      "price": "175 грн",
+      "image": "image/Highlighter.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Гель для брів",
+      "shortname": "eyebrow gel",
+      "description": "Зафіксує навіть неслухняні брови.",
+      "price": "100 грн",
+      "image": "image/eyebrowgel.jpg"
+    }
+  ]
+}
