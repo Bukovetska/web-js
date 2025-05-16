@@ -34,13 +34,13 @@ h1{
   color: white;
 }
 
-.category-title {
+.title {
   color: white;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
-.category-link {
+.link {
   display: block;
   margin: 10px auto;
   width: fit-content;
@@ -50,7 +50,7 @@ h1{
   cursor: pointer;
 }
 
-.catalog-container {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -76,4 +76,7 @@ h1{
 }
 .price {
   font-weight: bold;
+}
+main#content {
+  padding-top: 40px;
 }
