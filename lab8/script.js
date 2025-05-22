@@ -1,57 +1,77 @@
 const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
 
-hamburger.addEventListener('click', function() {
+hamburger.addEventListener('click', () => {
   menu.classList.toggle('show');
 });
 
-let slide = 0;
-const allSlides = document.querySelectorAll('.slide');
-const allDots = document.querySelectorAll('.dot');
+function loadSlides() {
+  fetch('slides.json')
+    .then(response => response.json())
+    .then(data => initialize(data));
+}
 
-function show(value) {
-  for (let i = 0; i < allSlides.length; i++) {
-    allSlides[i].classList.remove('active');
-    allDots[i].classList.remove('active');
+function initialize(data) {
+  const carrousel = document.getElementById('carrousel');
+  const indicator = document.getElementById('indicator');
+
+  for (let i = 0; i < data.length; i++) {
+    const slide = document.createElement('div');
+    slide.className = 'slide' + (i === 0 ? ' active' : '');
+    slide.innerHTML = `<img src="${data[i].src}" alt="${data[i].alt}">`;
+    carrousel.appendChild(slide);
+
+    const dot = document.createElement('span');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.dataset.slide = i;
+    indicator.appendChild(dot);
   }
 
-  allSlides[value].classList.add('active');
-  allDots[value].classList.add('active');
-  slide = value;
-}
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  let current = 0;
+  let timer;
 
-const previous = document.querySelector('.prev');
-const next = document.querySelector('.next');
+  function show(index) {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove('active');
+      dots[i].classList.remove('active');
+    }
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+    current = index;
+  }
 
-let auto;
+  function start() {
+    timer = setTimeout(() => {
+      show((current + 1) % slides.length);
+      start();
+    }, 3000);
+  }
 
-function start() {
-  auto = setTimeout(() => {
-    show((slide + 1) % allSlides.length);
+  function reset() {
+    clearTimeout(timer);
     start();
-  }, 3000);
-}
+  }
 
-function reset() {
-  clearTimeout(auto);
   start();
-}
 
-start();
-
-previous.onclick = function() {
-  show((slide - 1 + allSlides.length) % allSlides.length);
-  reset();
-};
-
-next.onclick = function() {
-  show((slide + 1) % allSlides.length);
-  reset();
-};
-
-for (let i = 0; i < allDots.length; i++) {
-  allDots[i].addEventListener('click', function() {
-    show(i);
+  document.querySelector('.prev').onclick = () => {
+    show((current - 1 + slides.length) % slides.length);
     reset();
-  });
+  };
+
+  document.querySelector('.next').onclick = () => {
+    show((current + 1) % slides.length);
+    reset();
+  };
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].onclick = () => {
+      show(i);
+      reset();
+    };
+  }
 }
+
+loadSlides();
