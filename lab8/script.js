@@ -5,7 +5,7 @@ hamburger.addEventListener('click', () => {
   menu.classList.toggle('show');
 });
 
-function loadSlides() {
+function load() {
   fetch('slides.json')
     .then(response => response.json())
     .then(data => initialize(data));
@@ -17,12 +17,18 @@ function initialize(data) {
 
   for (let i = 0; i < data.length; i++) {
     const slide = document.createElement('div');
-    slide.className = 'slide' + (i === 0 ? ' active' : '');
+    slide.className = 'slide';
+    if (i === 0) {
+      slide.classList.add('active');
+    }
     slide.innerHTML = `<img src="${data[i].src}" alt="${data[i].alt}">`;
     carrousel.appendChild(slide);
 
     const dot = document.createElement('span');
-    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.className = 'dot';
+    if (i === 0) {
+      dot.classList.add('active');
+    }
     dot.dataset.slide = i;
     indicator.appendChild(dot);
   }
@@ -55,7 +61,6 @@ function initialize(data) {
   }
 
   start();
-
   document.querySelector('.prev').onclick = () => {
     show((current - 1 + slides.length) % slides.length);
     reset();
@@ -74,4 +79,4 @@ function initialize(data) {
   }
 }
 
-loadSlides();
+load();
