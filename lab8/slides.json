@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "src": "image/conditioner.jpg",
+    "alt": "Conditioner"
+  },
+  {
+    "id": 1,
+    "src": "image/shampoo.jpg",
+    "alt": "Shampoo"
+  },
+  {
+    "id": 2,
+    "src": "image/oil.jpg",
+    "alt": "Oil"
+  },
+  {
+    "id": 3,
+    "src": "image/lipstick.jpg",
+    "alt": "Lipstick"
+  },
+  {
+    "id": 4,
+    "src": "image/hyaluronic.jpg",
+    "alt": "Hyaluronic Acid"
+  }
+]
